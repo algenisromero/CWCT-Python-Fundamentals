@@ -1,0 +1,42 @@
+Review #1
+
+Design/Implementation: Are there noticeable issues/flaws in the design and implementation of the code? 
+Both of your code are well implemented. The use of modules and functions makes it easier to read the code. Some of your comments are not clear they looks like are part of your code or some testing operations that you comment out to avoid being run it with the rest of your code. The code is not properly indented. I know this is maybe the web-browser discussion editor applied the wrong text format. Great job!
+
+How would you remedy such issues?
+When I apply comments I like to write everything as a text string. For example, instead of writing "# value = value + 1", you would be better off writing "# The value of the variable will be equal to the value plus one." This is because many programmers, including me, can use different operations to test and comment on each other. It is good security practice to clean up the code after completion. Review and clean comments with passwords, usernames, keys, test codes, unused variables, and more.
+
+Readability: Is the code well organized and easy to follow? Can you understand what is going on, easily?
+Your code is well organized.
+
+Documentation: Is the documentation well-written? 
+The use of comments can be improved by avoiding the use of Python like operations as comments. 
+
+does it explain what the code is accomplishing and how?
+You use a header with a brief description with the issue your coding is solving. Your comments help to understand each part of your code. You provide clear and concise comments in your code.
+
+Efficiency: Was the code efficient, without sacrificing readability and understanding?
+The code is efficient with minor sacrife on readability and understanding. The indetention is a vital part to understand anyone code. But in overall everything else is working as expected. 
+
+Happy coding!
+
+
+Review #2
+Design/Implementation: Are there noticeable issues/flaws in the design and implementation of the code? 
+Your code looks great. Some minor flaws are that your variables name do not use the python style guide. You can obtain same results by usign less line of coding. But overall, your implementation and design are well documented and your code work as expected.
+
+How would you remedy such issues?
+By using Python style guide instace variables should be name like 'user_weight'. You can learn more about it here https://peps.python.org/pep-0008/#method-names-and-instance-variables. By placing your operations inside the print function you can use less line of code, somethign like 'print("Your weight in pounds on the Mercury is ", round(userWeight * .38, 2))'. Your code does not have any issues, I just provide you with others ways to achive the same result.
+
+Readability: Is the code well organized and easy to follow? Can you understand what is going on, easily?
+Your code is easy to follow and understand.
+
+Documentation: Is the documentation well-written?
+You provided your code with enough comments and clear variable names.   
+
+does it explain what the code is accomplishing and how?
+You included a header with a description of the problem your code is trying to resolved.
+
+Efficiency: Was the code efficient, without sacrificing readability and understanding?
+Your code is efficient and do not sacrify readability. You solve the issue by using the least amount of coding lines.
+

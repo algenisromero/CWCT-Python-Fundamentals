@@ -1,0 +1,71 @@
+import csv
+import matplotlib.pyplot as plt
+
+with open('CWCT140\\Walking_SensorData.csv', newline='') as f:
+    reader = csv.reader(f)
+    data = list(reader)
+
+sensor1_list = [float(row[0]) for row in data]
+sensor2_list = [float(row[1]) for row in data]
+#print(sensor1_list)
+#print(sensor2_list)
+
+plt.plot(sensor1_list, label="Right Foot")
+plt.plot(sensor2_list, label="Left Foot")
+plt.xlabel("T i m e", fontsize=14)
+plt.ylabel("F o r c e", fontsize=14)
+plt.legend(loc="upper left")
+plt.show()
+
+
+
+import requests
+from bs4 import BeautifulSoup
+import matplotlib.pyplot as plt
+import numpy as np
+import json
+import datetime as dt
+
+# HTTP GET request to web service with "api" querystring parameter = "stocks"
+page = requests.get("http://www.activitysuite.com/devry.aspx?api=stocks")
+soup = BeautifulSoup(page.content, 'html.parser')
+resp = soup.text
+
+# Load JSON response into dictionary
+pydict = json.loads(resp)
+print("Stocks in report:")
+dailyreports = pydict["dailyreport"]
+firstreport = dailyreports[0]
+lastreport = dailyreports[len(dailyreports)-1]
+for eachstock in firstreport["stocks"]:
+    print (eachstock["symbol"])
+
+symbol = input("Enter Symbol: ").upper()
+prices = []
+dates = []
+ticks = []
+i = 0
+for eachreport in pydict["dailyreport"]:
+    for eachstock in eachreport["stocks"]:
+        if eachstock["symbol"] == symbol:
+            oDate = dt.datetime.strptime(eachreport["date"], "%m/%d/%Y")
+            print(eachreport["date"] + " " + eachstock["symbol"] + " $" + eachstock["price"])
+            prices.append(float(eachstock["price"]))
+            dates.append(dt.datetime.strftime(oDate, "%m/%d"))
+            ticks.append(int(i))
+            i = i + 1
+
+price_array = np.array(prices)
+price_min = np.min(price_array)
+price_max = np.max(price_array)
+
+plt.figure(figsize=(12,5), dpi=96)
+plt.plot(dates, price_array, label="Stock Report for " + symbol)
+plt.xticks(ticks, dates, rotation=45)
+plt.ylim(0.95 * price_min, 1.05 * price_max)
+plt.ylabel("P r i c e", fontsize=16)
+plt.legend(loc="upper left")
+plt.show()
+
+
+

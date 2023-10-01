@@ -1,0 +1,44 @@
+Review #1
+
+Design/Implementation: Are there noticeable issues/flaws in the design and implementation of the code? 
+Both of your code are well implemented. In the weight code some results contain very long decimals and the variable earth is assigned to get the user weight. You also had a minor grammar issue with the word 'weigh' in one of your input function. You did not use enough comments like in your restaurant code. 
+
+In the restaurant code the suggested tip is not define as a variable like the "tax_rate". In both code there are variables that could be declare as constants. Great job with your code, everything works as expected and 
+
+How would you remedy such issues?
+To solve the issue with long decimal you can use the same approach as in your restaurant code. Use of the round function to get results rounded to at least two decimal points. It is better if you name your variable 'earth' as 'weight' because your input function is asking for the user's weight. You missing a the 't' for weight, you know how to fixed :D. You can add more comments to let know others what is going on with your code. Something like "Getting user name and weight" can be very helpful to later understand the code.
+
+You can also declare a variable with the suggested tip amount. Just like you did with 'tax_rate'. When we have a variable that is not going to change we put the variable name in uppercase. So we can change 'tax_rate' to 'TAX_RATE' and this let know others that this value is a constant and never change in your code. You can learn more about this by reading the 'Style Guide for Python Code', here is the website https://peps.python.org/pep-0008/
+
+Readability: Is the code well organized and easy to follow? Can you understand what is going on, easily?
+Your code is well organized and easy to follow.
+
+Documentation: Is the documentation well-written? 
+You use comments and maybe a small description about what are you trying to solve with your code could be helpful.
+
+does it explain what the code is accomplishing and how?
+You did not use a header with a brief description as I explained before. But your comments help to understand each part of your code. You provide clear and concise comments in your code.
+
+
+Efficiency: Was the code efficient, without sacrificing readability and understanding?
+I can see that you use the least amount of coding lines to solve each one of the assignments. There is always room to improve your code.
+
+Review #2
+Design/Implementation: Are there noticeable issues/flaws in the design and implementation of the code? 
+Your code looks great. Some minor flaws are that your variables name do not use the python style guide. You can obtain same results by usign less line of coding. But overall, your implementation and design are well documented and your code work as expected.
+
+How would you remedy such issues?
+By using Python style guide instace variables should be name like 'user_weight'. You can learn more about it here https://peps.python.org/pep-0008/#method-names-and-instance-variables. By placing your operations inside the print function you can use less line of code, somethign like 'print("Your weight in pounds on the Mercury is ", round(userWeight * .38, 2))'. Your code does not have any issues, I just provide you with others ways to achive the same result.
+
+Readability: Is the code well organized and easy to follow? Can you understand what is going on, easily?
+Your code is easy to follow and understand.
+
+Documentation: Is the documentation well-written?
+You provided your code with enough comments and clear variable names.   
+
+does it explain what the code is accomplishing and how?
+You included a header with a description of the problem your code is trying to resolved.
+
+Efficiency: Was the code efficient, without sacrificing readability and understanding?
+Your code is efficient and do not sacrify readability. You solve the issue by using the least amount of coding lines.
+

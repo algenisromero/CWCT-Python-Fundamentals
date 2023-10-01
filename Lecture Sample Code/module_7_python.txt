@@ -1,0 +1,68 @@
+# Animal Class
+
+class Animal():
+    def __init__(self, description, sound):
+        self._description = description
+        self._sound = sound
+
+    def setSound(self, sound):
+        self._sound = sound
+
+    def setDescription(self, description):
+        self._description = description
+
+    def __str__(self) -> str:
+        return "I am a " + self._description + " and I " + self._sound
+
+# Main program
+myDog = Animal("dog", "bark")
+myCat = Animal("cat", "meow")
+print(myDog)
+print(myCat)
+myDog.setSound("woof woof")
+print(myDog)
+print()
+
+# list version
+myAnimalList = []
+myAnimalList.append(Animal("dog", "bark"))
+myAnimalList.append(Animal("cat", "meow"))
+myAnimalList.append(Animal("mouse", "squeak"))
+myAnimalList.append(Animal("horse", "winnie"))
+myAnimalList.append(Animal("cow", "moo"))
+
+for animal in myAnimalList:
+    print(animal)
+
+#tkinter demo
+import tkinter as tk
+from tkinter import Button, ttk, messagebox
+
+def show_msg(mesg):
+   messagebox.showinfo("CEIS150", mesg)
+
+window = tk.Tk()
+window.geometry('400x300')
+window.title("Simple UI")
+greeting = tk.Label(text="Hello UI", font= ('Aerial 17 bold italic'))
+greeting.pack()
+
+#Adding tabs with frames
+notebook = ttk.Notebook(window)
+notebook.pack(pady=10, expand=True)
+# create frames -- for background color, must use tkinter package
+frame1 = tk.Frame(notebook, width=400, height=280, background='#800000')
+frame2 = tk.Frame(notebook, width=400, height=280, background='#000080')
+# add frames to notebook
+notebook.add(frame1, text='General Information')
+notebook.add(frame2, text='My Profile')
+
+# create button group in frame 1
+myGroup = ttk.LabelFrame(frame1, text='My Command Group')
+myGroupButton1 = Button(myGroup, text='New Item 1', command=lambda: show_msg("I clicked Item 1"))
+myGroupButton2 = Button(myGroup, text='New Item 2', command=lambda: show_msg("I clicked Item 2"))
+myGroupButton1.pack(pady=2)
+myGroupButton2.pack(pady=2)
+myGroup.pack(expand=True)
+
+window.mainloop()
