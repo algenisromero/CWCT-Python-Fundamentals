@@ -1,4 +1,5 @@
 # Excluding files
 /venv
-/.idea
+.idea
+.idea/.idea
 *.mp4
