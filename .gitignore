@@ -1,5 +1,5 @@
 # Excluding files
-/venv
-.idea
-.idea/.idea
+venv/
+.idea/
 *.mp4
+*.txt
