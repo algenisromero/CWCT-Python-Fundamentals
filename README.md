@@ -1,4 +1,4 @@
-(https://github.com/algenisromero/CWCT_pythonfundamentals/blob/main/python.jpg)
+![Python Fundamentals](https://github.com/algenisromero/CWCT_pythonfundamentals/blob/main/python.jpg)
 
 # COURSE OUTLINE
 
